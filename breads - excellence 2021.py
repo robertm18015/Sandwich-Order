@@ -41,7 +41,7 @@ def meats():
     while meatcount < 4:
         print(meatcount," ", meatlist[meatcount])
         meatcount+= 1
-    meattype = int(inpuut("What number meat do you want"))
+    meattype = int(input("What number meat do you want"))
 
 def cheeses():
     global cheesetypes, cheeselist
@@ -51,27 +51,28 @@ def cheeses():
     while cheesecount < 4:
         print(cheesecount," ", cheeselist[cheesecount])
         cheesecount+= 1
-    cheesetype = int(inpuut("What number cheese do you want"))
+    cheesetype = int(input("What number cheese do you want"))
 
 def salads():
     global saladtype,saladlist,saladwanted
     saladlist = ["Lettuce", "Tomato", "Carrot", "Cucumber","Onions"]
     saladcount = 0
-    print("We have the following salaads, you can have as many as you want")
+    print("We have the following salads, you can have as many as you want")
     while saladcount < 5:
         print(saladcount," ",saladlist[saladcount])
         saladcount+=1
     print("Press ENTER when you have finished choosing your salads")
-    saladwanted = " "
+    saladwanted = ""
     saladtype = " "
-    while saladtype != " ":
+    while saladtype != "":
         saladtype = input("What number salad do you want? ")
-        if saladtype != " "
+        if saladtype != "":
             saladtype=int(saladtype)
             saladwanted = saladwanted + " " + saladlist[saladtype]
 
 def dressings():
-    global dressingstype,dressingslistdressingslist=["BBQ Sauce","Ranch Dressing", "Mayo", "No Sauce"]
+    global dressingstype,dressingslist
+    dressingslist=["BBQ Sauce","Ranch Dressing", "Mayo", "No Sauce"]
     dressingscount=0
     print("We have the following dressings")
     while dressingscount <4:
@@ -102,8 +103,8 @@ def output_order():
 
 #main program
 first_name = force_name("Please enter in your name",2,10)
-cellphone = get_[hone_number("Please enter in your cellphone number")]
+cellphone = get_phone_number("Please enter in your cellphone number")
 breads()
 meats()
-cheese()
+cheeses()
 salads()
